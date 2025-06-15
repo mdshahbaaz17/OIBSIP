@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Beautiful Landing Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: linear-gradient(120deg, #6e8efb, #a777e3);
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      animation: fadeIn 1.5s ease;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      animation: fadeIn 2s ease;
+    }
+
+    header button {
+      padding: 12px 25px;
+      font-size: 1rem;
+      background-color: #fff;
+      color: #6e8efb;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    header button:hover {
+      background-color: #e0e0e0;
+      transform: translateY(-2px);
+    }
+
+    section#about {
+      padding: 80px 20px;
+      text-align: center;
+      background-color: #f7f7f7;
+    }
+
+    section#about h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    section#about p {
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    footer {
+      background-color: #222;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to My Landing Page</h1>
+    <p>Beautiful, responsive and modern design with smooth scroll</p>
+    <button onclick="scrollToSection()">Learn More</button>
+  </header>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>
+      We are passionate about creating beautiful and effective web experiences.
+      Our landing pages are fast, user-friendly, and optimized for all devices.
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 My Landing Page. All rights reserved.
+  </footer>
+
+  <script>
+    function scrollToSection() {
+      document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+</body>
+</html>
